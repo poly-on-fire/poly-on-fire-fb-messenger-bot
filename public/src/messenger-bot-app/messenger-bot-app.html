@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="messenger-bot-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class MessengerBotApp extends Polymer.Element {
+      static get is() { return 'messenger-bot-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'messenger-bot-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MessengerBotApp.is, MessengerBotApp);
+  </script>
+</dom-module>
